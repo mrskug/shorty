@@ -1,0 +1,36 @@
+# Shorty
+
+## Usage
+
+### Install and run
+```bash
+cp .env.example .env
+rustup override set nightly
+cargo build
+docker-compose up -d db
+diesel migration run
+cargo run
+```
+
+### Basic usage
+
+#### Store short url
+``` bash
+curl --data "url=https://www.example.com" http://localhost:8000/
+Response: J0
+```
+
+#### Store named url
+```bash
+curl --data "url=https://www.example.com" --data "name=example" http://localhost:8000/named
+Response: example
+```
+
+#### Use short url
+```bash 
+curl http://localhost:8000/J0
+```
+or
+```bash 
+curl http://localhost:8000/example
+```
