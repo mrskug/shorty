@@ -30,7 +30,7 @@ impl Cache for Database {
             .order(id.desc())
             .limit(1)
             .load::<i32>(&conn)
-            .expect("fail");
+            .expect("Failed to get next id");
         let short = if id_.len() > 0 {
             let u64_id = if id_[0] < 0 {
                 None
@@ -63,7 +63,7 @@ impl Cache for Database {
             .filter(hash.eq(short))
             .limit(1)
             .load::<ShUrl>(&conn)
-            .expect("fail");
+            .expect("Failed to lookup url");
         if result.len() > 0 {
             Some(result[0].url.to_string())
         } else {
