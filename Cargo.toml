@@ -1,6 +1,6 @@
 [package]
-name = "ksf-ly"
-version = "0.1.0"
+name = "shorty"
+version = "0.1.1"
 authors = ["Christoffer Holmberg <christoffer.holmberg@ksfmedia.fi>"]
 edition = "2018"
 
