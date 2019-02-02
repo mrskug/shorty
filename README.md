@@ -9,7 +9,7 @@ cp .env.example .env
 rustup override set nightly
 cargo build
 docker-compose up -d db
-cargo install diesel_cli
+cargo install diesel_cli --no-default-features --features postgres
 diesel migration run
 cargo run
 ```
