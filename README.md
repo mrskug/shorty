@@ -1,9 +1,8 @@
 # Shorty
-
-## Usage
 This is an url shortener written in Rust based on the tutorial 
 [here](https://matthias-endler.de/2017/rust-url-shortener/) 
 and extended to store urls in a PostgreSQL DB
+## Usage
 ### Install and run
 ```bash
 cp .env.example .env
