@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: postgres:9.6-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: "ksf-ly"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "dev"
+      POSTGRES_INITDB_ARGS: "--locale en_US.UTF-8 -E UTF8"
+    ports:
+      - "127.0.0.1:5432:5432"

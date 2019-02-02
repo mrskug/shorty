@@ -1,0 +1,12 @@
+[package]
+name = "ksf-ly"
+version = "0.1.0"
+authors = ["Christoffer Holmberg <christoffer.holmberg@ksfmedia.fi>"]
+edition = "2018"
+
+[dependencies]
+rocket = "0.4.0"
+rocket_codegen = "0.4.0"
+harsh = "0.1.5"
+diesel = { version = "1.0.0", features = ["postgres"] }
+dotenv = "0.9.0"
